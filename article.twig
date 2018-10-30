@@ -1,0 +1,161 @@
+<div id="content" class="content-wrapper">
+    <div class="container carto-duo">
+        <section class="carto-duo-main">
+            <div class="content-wrapper">
+                <div class="ds-1col node node-article view-mode-full  clearfix">
+                    <div class="content-header">
+                        <div class="field-title-field">
+                            <h1>{{article.title}}</h1>
+                        </div>
+
+                        <div class="field-post-date">{{article.publishedDate | date('d M Y')}}</div>
+
+                        <div class="field-byline-term">{{article.createdBy['displayName']}}</div>
+                    </div>
+                    <div class="field-standfirst">
+                        <p>Less than 10 per cent of international students and backpackers in Australia recover unpaid wages, even when they are aware they are being underpaid.</p>
+                    </div>
+                    {% if article.media | length > 0 %}
+                        {% for media in article.media %}
+                            {% if article.featuredMedia.id is defined and article.featuredMedia.id == media.id %}
+                            {% set img = _Media.getMediaUrl(article.featuredMedia, 563, 396, {'crop': 'limit'} ) %}
+                                <div class="field-feature-image">
+                                    <!-- scald=14051:full_width -->
+                                    <div class="ds-1col scald-atom view-mode-full_width  clearfix" style="text-align:center">
+                                        <img src="{{img}}" />
+                                        {% if media.caption is not empty %}
+                                            <div class="field-scald-caption">
+                                                <p>{{media.caption}}</p>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+
+                                    <!-- END scald=14051 -->
+                                </div>
+
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                    <div class="field-article-body">
+                        {{article.content | raw}}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="carto-duo-sidebar">
+            <div class="content-wrapper">
+                <div id="block-views-media-contact-teaser-media-contact" class="block block-views">
+                    <h2>Media contact</h2>
+                    <div class="content">
+                        <div class="view view-media-contact-teaser view-id-media_contact_teaser view-display-id-media_contact view-dom-id-541a613035a54f825f5d4604ba54ef32">
+                            <div class="view-content">
+                                <div class="field-contact-name">
+                                    Diane Nazaroff </div>
+                                <div class="field-contact-department">
+                                    UNSW Media &amp; Content </div>
+                                <div class="field-contact-phone">
+                                    +61 (2) 9385 8107, +61 (0)424 479 199 </div>
+                                <div class="field-contact-email">
+                                    <a href="mailto:diane.nazaroff@unsw.edu.au">diane.nazaroff@unsw.edu.au</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-separator"></div>
+                <div class="panel-pane pane-views-panes pane-similar-articles-similar-articles">
+
+                    <h2 class="pane-title">
+                        Similar articles </h2>
+                    <div class="pane-content">
+                        <div class="view view-similar-articles view-id-similar_articles view-display-id-similar_articles view-dom-id-254ccd95d95d99b14a5f079e5a771436">
+                            <div class="view-content">
+                                <div class="views-row views-row-1 views-row-odd views-row-first">
+                                    <div class="ds-1col node node-article view-mode-title_teaser  clearfix">
+                                        <div class="field-title-field">
+                                            <h2><a href="javascript:;">Survey
+                                                    to illuminate exploitation of temporary workers</a></h2>
+                                        </div>
+
+                                        <div class="field-node-link">
+                                            <a href="javascript:;">Read
+                                                more</a> </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-2 views-row-even">
+                                    <div class="ds-1col node node-article view-mode-title_teaser  clearfix">
+                                        <div class="field-title-field">
+                                            <h2><a href="javascript:;">Addressing migrant worker exploitation in the Asia Pacific region</a></h2>
+                                        </div>
+
+                                        <div class="field-node-link">
+                                            <a href="javascript:;">Read more</a> </div>
+                                    </div>
+                                </div>
+                                <div class="views-row views-row-3 views-row-odd">
+                                    <div class="ds-1col node node-article view-mode-title_teaser  clearfix">
+
+
+
+                                        <div class="field-title-field">
+                                            <h2><a href="javascript:;">New
+                                                    study goes deeper into international student exploitation</a></h2>
+                                        </div>
+
+                                        <div class="field-node-link">
+                                            <a href="javascript:;">Read
+                                                more</a> </div>
+                                    </div>
+
+                                </div>
+                                <div class="views-row views-row-4 views-row-even">
+                                    <div class="ds-1col node node-article view-mode-title_teaser  clearfix">
+
+
+
+                                        <div class="field-title-field">
+                                            <h2><a href="javascript:;">UNSW
+                                                    Law students release international guide to protect migrant workers</a></h2>
+                                        </div>
+
+                                        <div class="field-node-link">
+                                            <a href="javascript:;">Read
+                                                more</a> </div>
+                                    </div>
+
+                                </div>
+                                <div class="views-row views-row-5 views-row-odd views-row-last">
+                                    <div class="ds-1col node node-article this-is-opinion view-mode-title_teaser  clearfix">
+
+
+
+                                        <div class="field-title-field">
+                                            <h2><a href="javascript:;">Australia is not making the best use of skilled migrants</a></h2>
+                                        </div>
+
+                                        <div class="field-node-link">
+                                            <a href="javascript:;">Read more</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-separator"></div>
+                <div class="panel-pane pane-entity-field pane-node-field-keywords">
+                    <h2 class="pane-title"> Article Tags </h2>
+                    <div class="pane-content">
+                        <div class="field-keywords">
+                            <a href="javascript:;">wage theft</a> 
+                        </div>
+                        <div class="field-keywords">
+                            <a href="javascript:;">Bassina Farbenblum</a> 
+                        </div>
+                        <div class="field-keywords">
+                            <a href="javascript:;">migrant workers</a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
