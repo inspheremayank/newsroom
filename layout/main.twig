@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+{% set networkData = _Network.getNetworkData() %}
+<html id="wq" lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <title>{{this.title | raw}}</title>
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/mura.7.1.min.css">
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/mura.7.1.skin.css">
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/bootstrap.css">
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/all.css" integrity="sha384-TXfwrfuHVznxCssTxWoPZjhcss/hp38gEOH8UPZG/JcXonvBQ6SlsIF49wUzsGno" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/site.css">
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/theme.css">
+        <script src="{{networkData.templatePath}}/static/css/jquery-3.3.1.min.js.download"></script>
+        <link rel="stylesheet" href="{{networkData.templatePath}}/static/css/yrh1ufi.css">
+        <link href="http://sandbox.flordis.com.au/themes/flordis/images/favicon-32x32_1favicon-32x32.png" rel="shortcut icon" type="image/x-icon">
+        <link href="http://sandbox.flordis.com.au/themes/flordis/images/favicon.png" rel="apple-touch-icon">	
+
+        <script type="text/javascript" src="{{networkData.templatePath}}/static/js/mura.min.js.download" defer="defer"></script>
+        <script>
+            (function (root, config) {
+                root.queuedMuraCmds = [], root.queuedMuraPreInitCmds = [], root.deferMuraInit = function () {
+                    void 0 !== root.Mura && "function" == typeof root.Mura.init ? root.Mura.init(config) : ("function" != typeof root.Mura && (root.mura = root.m = root.Mura = function (o) {
+                        root.queuedMuraCmds.push(o)
+                    }, root.Mura.preInit = function (o) {
+                        root.queuedMuraPreInitCmds.push(o)
+                    }), setTimeout(root.deferMuraInit))
+                }, root.deferMuraInit();
+            }
+            )(this, {
+                loginURL: "?display=login",
+                siteid: "FLAU",
+                contentid: "125242EA-DD16-45C7-9F9C369BB751F69B",
+                contenthistid: "975ADC6A-221C-4256-BE43079053DD9917",
+                parentid: "0CF71C2F-1760-4C9F-BC92F8C849CFB58A",
+                context: "",
+                nocache: 0,
+                assetpath: "/sites/FLAU",
+                corepath: "/core",
+                themepath: "/themes/flordis",
+                reCAPTCHALanguage: "en",
+                preloaderMarkup: "\x3Ci\x20class\x3D\x22mura\x2Dpreloader\x20fa\x20fa\x2Drefresh\x20fa\x2Dspin\x22\x3E\x3C\x2Fi\x3E",
+                mobileformat: false,
+                windowdocumentdomain: "",
+                layoutmanager: true,
+                type: "Page",
+                subtype: "InsightArticle",
+                queueObjects: true,
+                rb: {"formrequiredwrapperclass": "", "formradiolabelclass": "form-check-label", "formresponsewrapperclass": "", "formwrapperclass": "", "formbuttoncancellabel": "Cancel", "formselectclass": "form-control", "formbuttonclass": "btn btn-primary", "formfileclass": "form-control", "formbuttonwrapperclass": "btn-group", "formbuttoninnerclass": "", "formcheckboxwrapperclass": "form-check", "formradiowrapperclass": "form-check", "formcheckboxlabelclass": "form-check-label", "formbuttonnextlclass": "form-nav", "forminputclass": "form-control", "formradioclass": "form-check-input", "formcheckboxclass": "form-check-input", "formfieldlabelclass": "control-label", "formtextareaclass": "form-control", "formbuttonbacklabel": "Back", "formbuttonsubmitclass": "form-submit  btn-primary", "formbuttonsubmitlabel": "Submit", "formrequiredlabel": "Required", "generalwrapperclass": "", "formbuttonnextlabel": "Next", "generalwrapperbodyclass": "", "formbuttomsubmitclass": "form-submit btn btn-primary", "formbuttonbackclass": "form-nav", "formerrorwrapperclass": "", "formbuttoncancelclass": "form-cancel btn btn-danger", "formwrapperbodyclass": "", "formgeneralcontrolclass": "form-control", "formfieldwrapperclass": "form-group"},
+                dtExample: "11/10/2024",
+                dtCh: "/",
+                dtFormat: [0, 1, 2],
+                dtLocale: "en-US"
+            });
+        </script>
+    </head>
+
+
+    <body id="healthinsights" class="depth-3 how-the-brain-works">
+
+        {{ this.render('_partials/header.twig', {networkData : networkData}) | raw }}
+
+        {{ content | raw}}
+
+        {{ this.render('_partials/footer.twig', {networkData : networkData}) | raw }}
+
+        {{ this.render('_partials/scripts.twig', {networkData : networkData}) | raw }}
+
+    </body>
+</html>

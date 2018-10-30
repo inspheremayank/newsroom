@@ -1,0 +1,26 @@
+<script src="{{networkData.templatePath}}/static/js/bootstrap.bundle.min.js.download"></script>
+<script src="{{networkData.templatePath}}/static/js/theme.js.download"></script>
+<script src="{{networkData.templatePath}}/static/js/headroom.min.js.download"></script>
+<script>
+    (function () {
+        var header = document.querySelector("header");
+        if (window.location.hash) {
+            header.classList.add("slide--up");
+        }
+
+        new Headroom(header, {
+            tolerance: {
+                down: 0,
+                up: 0
+            },
+            offset: 135,
+            classes: {
+                initial: "slide",
+                pinned: "slide--reset",
+                unpinned: "slide--up"
+            }
+        }).init();
+
+    }());
+</script>
+<script src="{{networkData.templatePath}}/static/js/mura.displayobject.cta.min.js.download" defer="defer"></script>
